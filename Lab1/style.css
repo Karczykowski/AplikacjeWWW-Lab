@@ -15,6 +15,11 @@
 		li {
 			margin-bottom: 20px
 		}
+		
+		form {
+			text-align: center;
+		}
+		
 		.menu {
 		padding: 20px;
 		background-color: #adadad;
@@ -24,7 +29,7 @@
 		.menu a {
 		color: black;
         text-decoration: none;
-        display: inline-block;
+        
         }
 
 		.title a {
@@ -53,7 +58,7 @@
 		height: 50px;
 		}
 		.main_menu {
-		text-align: center;
+		text-align: top;
 		font-size: 260%;
 		}
 		.main_menu_points {
@@ -71,3 +76,8 @@
             margin-bottom: 10px;
             width: 200px;
         }
+		
+		.large_input {
+			width: 160px;
+			height: 130px;
+		}
