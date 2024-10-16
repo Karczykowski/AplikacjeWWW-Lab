@@ -6,20 +6,21 @@
 <meta name="Author" content="Mariusz Karczykowski" />
 <title>Historia Lotów Kosmicznych</title>
 <link rel="stylesheet" href="style.css">
+<script src="timedate.js" type="text/javascript"></script>
 <script src="kolorujtlo.js" type="text/javascript"></script>
 </head>
-<body>
+<body onload="startclock()">
 <table>
         <tr>
 			<td class="menu" rowspan="2">
 			<h2 class="main_menu" >Menu</h2>
 				<ul class="main_menu_points">
-					<li><a href="pierwszylot.html">Pierwszy Lot</li>
-					<li><a href="apollo11.html">Apollo 11</li>
-					<li><a href="terazniejszosc.html">Teraźniejszosć</li>
-					<li><a href="onas.html">O nas</li>
-					<li><a href="kontakt.html">Kontakt</li>
-					<li><a href="lab2.html">Lab 2</li>
+					<li><a href="pierwszylot.html">Pierwszy Lot</a></li>
+					<li><a href="apollo11.html">Apollo 11</a></li>
+					<li><a href="terazniejszosc.html">Teraźniejszosć</a></li>
+					<li><a href="onas.html">O nas</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+					<li><a href="lab2.html">Lab 2</a></li>
 				</ul>
 			</td>
 		<td class="title">
@@ -38,6 +39,9 @@
 <INPUT TYPE="button" VALUE="szary" ONCLICK="changeBackground('#c0c0c0')">
 <INPUT TYPE="button" VALUE="czerwony" ONCLICK="changeBackground('#FF0000')">
 </FORM>
+
+<div id="zegarek"></div>
+<div id="data"></div>
         </td>
     </tr>
     <tr>

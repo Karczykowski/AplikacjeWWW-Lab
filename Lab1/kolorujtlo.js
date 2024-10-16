@@ -1,5 +1,3 @@
-
-function changeBackground(hexNumber)
-{
-document.bgColor=hexNumber;
+function changeBackground(hexNumber) {
+    document.body.style.backgroundColor = hexNumber;
 }
