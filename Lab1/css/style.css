@@ -101,3 +101,13 @@ body {
   			margin-left: auto;
  			margin-right: auto;
 		}
+
+		.video-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .video-item {
+            flex: 1 1 300px;
+        }
