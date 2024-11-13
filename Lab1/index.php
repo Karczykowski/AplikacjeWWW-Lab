@@ -14,6 +14,10 @@
 	<?php
 		error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 
+		include('cfg.php');
+		include('showpage.php');
+		echo '123';
+
 		$podstrona = '';
 
 		if (isset($_GET['idp']))
