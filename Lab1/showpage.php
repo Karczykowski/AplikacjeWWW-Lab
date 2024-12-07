@@ -1,21 +1,18 @@
 <?php
-function PokazPodstrone ($id)
+function PokazPodstrone($id)
 {
-$id_clear = htmlspecialchars($id);
+    $id_clear = htmlspecialchars($id);
 
-$query = "SELECT * FROM page_list WHERE id='$id_clear' LIMIT 1";
-$result = mysql_query($query);
-$row = mysql_fetch_array($result);
-//wywolywanie strony z bazy
-if (empty($row['id']))
-{
-    $web = '[nie znaleziono strony]';
-}
-else
-{
-    $web = $row['page_content'];
-}
+    global $link;
 
-return $web;
+    $query = "SELECT page_content FROM page_list WHERE id='$id_clear' LIMIT 1";
+    $result = mysqli_query($link, $query);
+
+    // Sprawdzanie wyniku
+    if ($result && $row = mysqli_fetch_assoc($result)) {
+        return $row['page_content'];
+    }
+
+    return '[nie znaleziono strony]';
 }
 ?>

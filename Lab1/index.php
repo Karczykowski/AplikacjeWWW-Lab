@@ -16,7 +16,6 @@
 
 		include('cfg.php');
 		include('showpage.php');
-		echo '123';
 
 		$podstrona = '';
 
