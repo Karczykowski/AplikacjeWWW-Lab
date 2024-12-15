@@ -94,5 +94,5 @@ if (isset($_GET['edytuj'])) {
 echo "<h3>Lista Kategorii:</h3>";
 PokazKategorie();
 echo "<br><a href='admin.php'>Zarządzaj stronami</a>";
-mysqli_close($link);
+echo "<br><a href='products.php'>Zarządzaj produktami</a>";
 ?>

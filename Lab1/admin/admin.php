@@ -177,5 +177,6 @@ if (isset($_GET['edit_id'])) {
     UsunPodstrone();
     echo '<br><a href="?add_page=1">Dodaj nową podstronę</a>';
     echo "<br><a href='categories.php'>Zarządzaj kategoriami</a>";
+    echo "<br><a href='products.php'>Zarządzaj produktami</a>";
 }
 ?>
