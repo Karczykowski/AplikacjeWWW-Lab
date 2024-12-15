@@ -70,12 +70,10 @@ function EdytujPodstrone($id)
     global $link;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tytul'])) {
-        // Pobranie danych z formularza
         $tytul = mysqli_real_escape_string($link, $_POST['tytul']);
         $tresc = mysqli_real_escape_string($link, $_POST['tresc']);
         $status = isset($_POST['aktywny']) ? 1 : 0;
 
-        // Przygotowanie zapytania do aktualizacji podstrony
         $query = "UPDATE page_list SET page_title = '$tytul', page_content = '$tresc', status = $status WHERE id = $id LIMIT 1";
         if (mysqli_query($link, $query)) {
             echo '<p>Podstrona została zaktualizowana!</p>';
@@ -83,12 +81,10 @@ function EdytujPodstrone($id)
             echo '<p>Wystąpił błąd podczas aktualizacji: ' . mysqli_error($link) . '</p>';
         }
     } else {
-        // Pobranie danych istniejącej podstrony z bazy danych
         $query = "SELECT page_title, page_content, status FROM page_list WHERE id = $id LIMIT 1";
         $result = mysqli_query($link, $query);
         $row = mysqli_fetch_assoc($result);
 
-        // Formularz edycji
         echo '<form method="post">
                 <label for="tytul">Tytuł:</label><br>
                 <input type="text" id="tytul" name="tytul" value="' . htmlspecialchars($row['page_title']) . '" required><br><br>
@@ -109,12 +105,10 @@ function DodajNowaPodstrone()
     global $link;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tytul'])) {
-        // Pobranie danych z formularza
         $tytul = mysqli_real_escape_string($link, $_POST['tytul']);
         $tresc = mysqli_real_escape_string($link, $_POST['tresc']);
         $status = isset($_POST['aktywny']) ? 1 : 0;
 
-        // Przygotowanie zapytania do dodania nowej podstrony
         $query = "INSERT INTO page_list (page_title, page_content, status) VALUES ('$tytul', '$tresc', $status)";
         if (mysqli_query($link, $query)) {
             echo '<p>Nowa podstrona została dodana!</p>';
@@ -122,7 +116,6 @@ function DodajNowaPodstrone()
             echo '<p>Wystąpił błąd podczas dodawania: ' . mysqli_error($link) . '</p>';
         }
     } else {
-        // Formularz dodawania nowej podstrony
         echo '<form method="post">
                 <label for="tytul">Tytuł:</label><br>
                 <input type="text" id="tytul" name="tytul" required><br><br>
@@ -145,7 +138,6 @@ function UsunPodstrone()
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
         $id = (int)$_POST['delete_id'];
 
-        // Przygotowanie zapytania do usunięcia podstrony
         $query = "DELETE FROM page_list WHERE id = $id LIMIT 1";
         if (mysqli_query($link, $query)) {
             echo '<p>Podstrona została usunięta!</p>';
@@ -184,5 +176,6 @@ if (isset($_GET['edit_id'])) {
     ListaPodstron();
     UsunPodstrone();
     echo '<br><a href="?add_page=1">Dodaj nową podstronę</a>';
+    echo "<br><a href='categories.php'>Zarządzaj kategoriami</a>";
 }
 ?>
