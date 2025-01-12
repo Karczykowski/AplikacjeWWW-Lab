@@ -1,8 +1,6 @@
 <?php
 session_start();
-
-require_once '../cfg.php';
-
+require_once('../cfg.php');
 function FormularzLogowania()
 {
     $wynik = "
@@ -10,7 +8,7 @@ function FormularzLogowania()
         <h1 class='heading'>Panel CMS:</h1>
         <div class='logowanie'>
             <form method='post' name='LoginForm' enctype='multipart/form-data' action='" . $_SERVER['REQUEST_URI'] . "'>
-                <table class='logowanie'>
+                <table class='logowanie' border='2' style='text-align:center'>
                     <tr>
                         <td class='log4_t'>podaj email</td>
                         <td><input type='text' name='login_email' class='logowanie' /></td>
@@ -38,12 +36,12 @@ function ListaPodstron()
     $query = "SELECT id, page_title FROM page_list LIMIT 100";
     $result = mysqli_query($link, $query);
 
-    echo '<table>
+    echo "<table border='2' style='text-align:center'>
             <tr>
                 <th>id</th>
                 <th>Tytuł strony</th>
                 <th>Czynności</th>
-            </tr>';
+            </tr>";
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         echo '<tr>';
