@@ -16,7 +16,7 @@ function PokazKontakt()
           </form>';
 }
 
-function WyslijMailKontakt($odbiorca = 'kontakt@twojadomena.pl')
+function WyslijMailKontakt($odbiorca = 'mkarczykowski@gmail.com')
 {
     if (empty($_POST['name']) || empty($_POST['message']) || empty($_POST['email'])) {
         echo 'Nie wypełniono wszystkich pól.';

@@ -12,11 +12,11 @@ function FormularzLogowania()
             <form method='post' name='LoginForm' enctype='multipart/form-data' action='" . $_SERVER['REQUEST_URI'] . "'>
                 <table class='logowanie'>
                     <tr>
-                        <td class='log4_t'>[email]</td>
+                        <td class='log4_t'>podaj email</td>
                         <td><input type='text' name='login_email' class='logowanie' /></td>
                     </tr>
                     <tr>
-                        <td class='log4_t'>[hasło]</td>
+                        <td class='log4_t'>podaj hasło</td>
                         <td><input type='password' name='login_pass' class='logowanie' /></td>
                     </tr>
                     <tr>
@@ -38,7 +38,7 @@ function ListaPodstron()
     $query = "SELECT id, page_title FROM page_list LIMIT 100";
     $result = mysqli_query($link, $query);
 
-    echo '<table border="1">
+    echo '<table>
             <tr>
                 <th>id</th>
                 <th>Tytuł strony</th>
