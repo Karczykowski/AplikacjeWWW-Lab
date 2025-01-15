@@ -22,9 +22,9 @@
 		if (isset($_GET['idp']))
 			$podstrona = $_GET['idp'];
 		else
-			$podstrona = "glowna.html";
+			$podstrona = "html/glowna.html";
 
-		include('html/'.$podstrona)
+		include($podstrona)
 ?>
 </body>
 </html>
