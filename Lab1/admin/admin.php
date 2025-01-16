@@ -3,15 +3,15 @@
         <td class="menu" rowspan="2">
         <h2 class="main_menu" >Menu</h2>
         <ul class="main_menu_points">
-            <li><a href="index.php?idp=pierwszylot.html">Pierwszy Lot</li>
-            <li><a href="index.php?idp=apollo11.html">Apollo 11</li>
-            <li><a href="index.php?idp=terazniejszosc.html">Teraźniejszosć</li>
-            <li><a href="index.php?idp=onas.html">O nas</li>
-            <li><a href="index.php?idp=contact.php">Kontakt</li>
-            <li><a href="index.php?idp=lab2.html">Lab 2</li>
-            <li><a href="index.php?idp=filmy.html">Filmy</a></li>
-            <li><a href="index.php?idp=php/shopping_cart.php">Koszyk</a></li>
-            <li><a href="admin/admin.php">Panel Administracyjny</a></li>
+        <li><a href="index.php?idp=html/pierwszylot.html">Pierwszy Lot</li>
+        <li><a href="index.php?idp=html/apollo11.html">Apollo 11</li>
+        <li><a href="index.php?idp=html/terazniejszosc.html">Teraźniejszosć</li>
+        <li><a href="index.php?idp=html/onas.html">O nas</li>
+        <li><a href="index.php?idp=php/contact.php">Kontakt</li>
+        <li><a href="index.php?idp=html/lab2.html">Lab 2</li>
+        <li><a href="index.php?idp=html/filmy.html">Filmy</a></li>
+        <li><a href="index.php?idp=php/shopping_cart.php">Koszyk</a></li>
+        <li><a href="index.php?idp=admin/admin.php">Panel Administracyjny</a></li>
         </ul>
         </td>
     <td class="title">

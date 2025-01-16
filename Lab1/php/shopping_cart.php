@@ -23,7 +23,7 @@
         <?php
         session_start();
         require_once 'cfg.php';
-        include_once 'C:\xampp\htdocs\projappweb\AplikacjeWWW-Lab\Lab1\admin\products_f.php';
+        include_once 'C:\xampp\htdocs\AplikacjeWWW-Lab\Lab1\admin\products_f.php';
 
         function AddToCart($productId, $quantity) {
             global $link;
@@ -103,15 +103,13 @@
             }
         }
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            if (isset($_POST['add_to_cart'])) {
-                $productId = intval($_POST['product_id']);
-                $quantity = intval($_POST['quantity']);
-                AddToCart($productId, $quantity);
-            } elseif (isset($_POST['remove_from_cart'])) {
-                $productId = intval($_POST['product_id']);
-                RemoveFromCart($productId);
-            }
+        if (isset($_POST['add_to_cart'])) {
+            $productId = $_POST['product_id'];
+            $quantity = $_POST['quantity'];
+            AddToCart($productId, $quantity);
+        } elseif (isset($_POST['remove_from_cart'])) {
+            $productId = $_POST['product_id'];
+            RemoveFromCart($productId);
         }
 
         PokazProduktyCutted();
